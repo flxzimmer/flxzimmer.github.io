@@ -35,7 +35,7 @@
 		  <ul class="nav navbar-nav">
 				  <li><a href="index.html">Home</a></li>
 			  <li><a href="#projects">Projects</a></li> 
-				  <li><a href="mycv.pdf">CV</a></li> 
+				  <li><a href="CV_fz.pdf">CV</a></li> 
 		  </ul>
 		</div>
 	  </div>
@@ -81,6 +81,8 @@
 
                     <p>I'm a third-year PhD student at the University of Zurich in the Psychological Methods department, supervised by Rudolf Debelak. My main research focuses on developing new methods for planning empirical studies. I like to use machine learning methods wherever I can, and am eager to learn more about the intersection of classical statistics and machine learning.</p>
 					
+					<p>I'm a third-year PhD student at the University of Zurich in the Psychological Methods department, supervised by Rudolf Debelak. My main research focuses on developing new methods for planning empirical studies. I like to use machine learning methods wherever I can, and am eager to learn more about the intersection of classical statistics and machine learning.</p>
+					
                 </div>
 					
 
@@ -98,7 +100,7 @@
 					
 			 <h5><b>Statistical Power Analysis for Item Response Theory Models</b></h5>
 
-                    <p>Some common psychometric models and hypothesis tests lacked formulas for determining statistical power as a function of sample size. We <a href = "https://doi.org/10.1007/s11336-022-09883-5">suggested and evaluated such formulas</a> and made them available in an <a href="https://github.com/flxzimmer/irtpwr">R package</a>. Further evaluation of the new methods is currently ongoing as part of a master's thesis. A potential next step in this project is to write a tutorial.</p>
+                    <p>Some common psychometric models and hypothesis tests lacked formulas for determining statistical power as a function of sample size. We <a href = "https://doi.org/10.1007/s11336-022-09883-5">suggested and evaluated such formulas</a> and made them available in an <a href="https://CRAN.R-project.org/package=irtpwr">R package</a>. Further evaluation of the new methods is currently ongoing as part of a master's thesis. A potential next step in this project is to write a tutorial.</p>
 
 			 <h5><b>Sample Size Planning for Complex Study Designs </b></h5>
 
@@ -115,9 +117,9 @@
 
 				 			
 				 <!-- Other people may like it too! -->
-				 				<p style="font-size:0.8em; float:left;" >Last updated: November 4th, 2022</p> 
+				 				<p  id="result" style="font-size:0.8em; float:left;" >Last updated: November 4th, 2022</p> 
 				<a style="color:#b5bec9;font-size:0.8em; float:right;" href="https://github.com/mavroudisv/plain-academic">Plain Academic</a> 
- 
+
             </div>
 
             
@@ -127,6 +129,31 @@
     </div>
     <!-- /.container -->
     
+   <script>
+      var date = document.lastModified;
+	  
+	  var oLastModif = new Date(document.lastModified);
+	  var myDate = new Date(document.lastModified);
+
+console.log('toISOString', myDate.toISOString());
+
+myNewDate = new Intl.DateTimeFormat(
+            "de-AT",
+            {year: "numeric", month: "numeric", day: "numeric"}
+).format(myDate).replace(/\./g, '.');
+
+myNewDate = new Intl.DateTimeFormat(
+            "de-AT",
+            {year: "numeric", month: "numeric"}
+).format(myDate).replace(/\./g, '/');
+
+
+console.log('Intl.DateTimeFormat', myNewDate);
+
+document.getElementById("result").innerHTML = "Last updated " +myNewDate + ".";
+
+
+   </script>
 
     
 </body>
