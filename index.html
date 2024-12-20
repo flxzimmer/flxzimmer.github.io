@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<!--
+    Plain-Academic by Vasilios Mavroudis
+    Released under the Simplified BSD License/FreeBSD (2-clause) License.
+    https://github.com/mavroudisv/plain-academic
+-->
+
+<html lang="en">
+
+<head>
+  <title>Felix Zimmer</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+  <style>
+    .small-break {
+      margin-bottom: 20px; /* Adjust the value as needed */
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+          data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="CV.pdf">CV</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <div class="row">
+
+
+      <!-- Contact Info on the Sidebar -->
+      <div class="col-sm-3">
+        <div class="row">
+          <div class="col-md-9 col-xs-7"> <img class="img-responsive" src="photo.png" alt=""></div>
+        </div><br>
+        <div style="font-family: 'Oswald', sans-serif; font-size: 32px;"><b>Felix Zimmer</b></div><br>
+        <p><b>felix.zimmer@mail.de</b><br>
+        <p>Independent Researcher
+          <br>
+        </p>
+
+
+        <dd><a href="https://scholar.google.com/citations?user=R-SYUiwAAAAJ&sortby=pubdate">Google Scholar</a></dd>
+        <dd><a href="https://www.researchgate.net/profile/Felix-Zimmer-2">ResearchGate</a></dd>
+        <dd><a href="https://orcid.org/0000-0002-8127-0007">ORCID</a></dd>
+        <p></p>
+
+        <dd><a href="CV.pdf">Curriculum Vitae</a></dd>
+        <p></p>
+
+      </div>
+
+      <!-- Entries Column -->
+      <div class="col-sm-7" style="height: 100vh;">
+
+        <!-- Main Image -->
+        <img class="img-responsive" src="banner2.jpg" alt=""><br>
+
+        <div style="margin-top:3%; " id="content">
+
+          <h4>Welcome!</h4>
+
+          <p>During my Masters and PhD studies in the field of psychology, I developed a passion for machine learning. I
+            have already incorporated some techniques into my previous projects</a>, and for my next projects I decided
+            to fully dive into machine learning research. In my spare time I enjoy bouldering, cycling, and eating lots
+            of Korean ramen.</p>
+
+
+          <br>
+          <hr>
+          <h4>Education</h4>
+          <p>
+            04/2020 - 04/2023: PhD in Psychology, University of Zurich, Switzerland<br>
+            10/2014 - 02/2020: MSc Psychology, Johannes Gutenberg University Mainz, Germany
+          </p>
+          
+
+          <br>
+          <hr>
+          <h4 id="projects">Current Projects</h4>
+
+          <p>Here is an overview of my current projects. If you have any questions or are interested in
+            collaborating with me, please feel free to get in touch.</p>
+  
+          <div class="small-break"></div>
+          <h5><b>Feature Selection for Neural Networks</b></h5>
+          <img class="img-responsive" src="figure_mnist.png" alt=""><br>
+
+          <p>
+            Feature selection is an intriguing problem because it can save a lot of computational resources and help to interpret what prediction algorithms base their decisions on. There are already a number of elegant and successful approaches to feature selection for neural networks. For example, <a href="https://www.jmlr.org/papers/v22/20-848.html">Lemhadri et al.</a> add a residual connection from the input layer to the output of the network to control which features are active. Or <a href="https://arxiv.org/abs/2303.07200">Atashgahi et al.</a>, who perform selection in the context of sparse neural networks by continuously removing and adding input neurons.
+          </p>
+          
+          <p>
+            To contribute to this pool of methods, I have developed RelChaNet, a lightweight algorithm that uses neuron pruning and regrowth in the input layer of a dense neural network (<a href="https://arxiv.org/abs/2410.02344">arXiv:2410.02344</a>). For neuron pruning, a gradient sum metric measures the relative change induced in a network after a feature enters, while neurons are randomly regrown. The algorithm is open-sourced as a <a href="https://github.com/flxzimmer/relchanet">Python package</a>. Next steps may involve extending the approach to sparse neural network training or using the involved metric as a variable importance measure.
+          </p>
+          
+
+          <br>
+          <hr>
+          <h4> Previous Projects</h4>
+
+          <p>Here is an overview of my previous/backlog projects.</p>
+          <div class="small-break"></div>
+          <h5><b>Applications of Machine Learning in Psychology</b></h5>
+
+          <p>Machine learning is increasingly gaining a foothold as a tool for psychological research. In my master's
+            thesis, I summarized the applications along the different subfields. Especially in image or text processing,
+            I found that machine learning - especially deep learning - has great potential. To keep up with the latest
+            developments and practice some teaching, I held a seminar in 2022 specifically on the applications of deep
+            learning in psychology <a href="https://doi.org/10.17605/osf.io/72S6U"> [open materials in German]</a>. In
+            the future, I want to expand on and publish a part of my master's thesis that applies natural language
+            processing.
+          </p>
+
+          <div class="small-break"></div>
+          <h5><b>Statistical Power Analysis for Item Response Theory Models</b></h5>
+
+          <p>Some common psychometric models and hypothesis tests lacked formulas for determining statistical power as a
+            function of sample size. We <a href="https://doi.org/10.1007/s11336-022-09883-5">suggested and evaluated
+              such formulas</a> and made them available in an <a href="https://CRAN.R-project.org/package=irtpwr">R
+              package</a>. Further evaluation of the new methods is currently ongoing as part of a master's thesis. A
+            potential next step in this project is to write a tutorial.</p>
+
+          <div class="small-break"></div>
+          <h5><b>Sample Size Planning for Complex Study Designs </b></h5>
+
+          <p>The relation of sample size and statistical power can be hard to describe mathematically, especially when
+            we look at more complex study designs. Modern designs can have multiple sample sizes, for example for
+            separate arms or stages of a clinical trial. We <a href="https://doi.org/10.31234/osf.io/tnhb2">developed an
+              approach</a> to estimate the sample sizes in these cases efficiently, while taking the cost of the overall
+            study design into account. Our approach builds on simulations combined with machine learning methods. It's
+            available in an <a href="https://cran.r-project.org/package=mlpwr">R package</a> along with a <a href="https://doi.org/10.31234/osf.io/r9w6t
+          ">tutorial</a>. Going forward, I want to refine this method and its implementation.</p>
+
+          <div class="small-break"></div>
+          <h5><b>Sample Size Planning for Validating Clinical Prediction Models </b></h5>
+
+          <p>Once a clinical prediction model has been developed using an initial data set, its predictive performance
+            needs to be validated using new data. The sample size for this validation needs to be planned with the
+            precision of the performance measurement in mind. In recent years, some methods have been proposed to solve
+            this problem. During my current visit with Daniel Stahl at King's College London, we aim to contribute to
+            this growing pool of methods.</p>
+
+        </div>
+
+
+        <br />
+        <br />
+
+        <!-- Other people may like it too! -->
+        <p id="result" style="font-size:0.8em; float:left;">Last updated: November 4th, 2022</p>
+        <a style="color:#000000;font-size:0.8em; float:right;" href="https://github.com/mavroudisv/plain-academic">Plain
+          Academic</a>
+
+      </div>
+
+
+    </div>
+    <!-- /.container -->
+
+    <script>
+      var date = document.lastModified;
+
+      var oLastModif = new Date(document.lastModified);
+      var myDate = new Date(document.lastModified);
+
+      console.log('toISOString', myDate.toISOString());
+
+      myNewDate = new Intl.DateTimeFormat(
+        "de-AT",
+        { year: "numeric", month: "numeric", day: "numeric" }
+      ).format(myDate).replace(/\./g, '.');
+
+      myNewDate = new Intl.DateTimeFormat(
+        "de-AT",
+        { year: "numeric", month: "numeric" }
+      ).format(myDate).replace(/\./g, '/');
+
+
+      console.log('Intl.DateTimeFormat', myNewDate);
+
+      document.getElementById("result").innerHTML = "Last updated " + myNewDate;
+
+
+    </script>
+
+
+</body>
+
+</html>
